@@ -1,0 +1,478 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Rasheedat The Analyst Portfolio 2</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="generic.html" class="logo">My Projects</a>
+					</header>
+
+				<!-- Nav -->
+					<!--nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">This is Massively</a></li>
+							<li class="active"><a href="generic.html">Generic Page</a></li>
+							<li><a href="elements.html">Elements Reference</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav -->
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<!--<span class="date">April 25, 2017</span>-->
+									<h3>BikeGear Solutions <br />
+									Sales Performance Analysis</h3>
+									<p>This sales analysis examines BikeGear Solutions' sales performance to identify key <br />
+									revenue drivers, product performance, customer trends, and growth opportunities.<br />
+									The insights support strategic decisions in marketing, inventory, and market expansion.</p>
+								</header>
+								<div class="image main"><img src="images/BikeGear/LUNA-Dashboard.jpg" alt="" /></div>
+								<hr class="major" />
+								<h4>Overview</h4>
+									<p>BikeGear Solutions (Retailer specializing in bike racks and cycling accessories across Canada, U.S., and Australia etc.)
+										<br>Challenges
+												<ol>
+												<li>Leadership needs data to refine regional marketing strategies, understand target demographics, manage inventory, and forecast demand.</li>
+												<li>Uncertainty around which regions, age groups, and product types are driving sales performance.</li>
+												<li>Difficulty anticipating demand cycles, leading to stock issues and missed promotional opportunities.</li>
+												</ol>
+												As a Business Analyst, I was tasked with performing a deep-dive Excel-based analysis to generate actionable insights from historical sales data.<br> I defined the project Objectives as 
+												<ol>
+												<li>Analyze regional sales performance.</li>
+												<li>Understand customer demographics.</li>
+												<li>Identify popular products.</li>
+												<li> Evaluate seasonal trends.</li>
+												</ol>
+									</p>
+								<div class="image right"><img src="images/BikeGear/bikegear-knime.jpg" alt="" /></div>
+								<h4>Data Collection & Preparation</h4>
+								<p>Bikegear sales transaction data was imported into KNIME to ensure data is clean (no invalid ages, no missing countries, no negative revenue), free from blanks and duplicates. Data such as region, product subcategories, dates, customer demographics, and profit figures was checked for completeness.</p>
+								<hr class="major" />
+								<div class="image left"><img src="images/BikeGear/pivotTables.jpg" alt="" /></div>
+									<h4>Exploratory Data Analysis(EDA)</h4>
+								<p>I made use of pivot tables, charts, and formulas in Excel to analyze trends in revenue, units sold, and profit by geography, age group, and time.</p>
+								<hr class="major" />
+									<h4>Insight Generation</h4>
+									<p>In order to generate insights that answers the business problems listed below, the follwoing pivot tables were used.</p>
+									<div class="row">
+										<div class="col-5-large col-10-xlarge">
+											<h5>1. Revenue Distribution by Region (BP1)</h5>
+											<!-- Table -->
+									<p>Visualization: Horizontal Bar Chart<br>Pivot Table Fields</p>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Area</th>
+													<th>Field</th>
+									</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Rows</td>
+													<td>Country</td>
+													
+												</tr>
+												<tr>
+													<td>Values</td>
+													<td>Sum of Revenue</td>
+													
+												</tr>
+											</tbody>
+											
+										</table>
+										<p>Sort: Largest to Smallest Revenue<br>Insight: Which country generates the most revenue?</p>
+									</div>
+									<h5>2. Product Subcategory Appeal by Age Group</h5>
+											<p>Visualization: Stacked Column Chart<br>Pivot Table Fields</p>
+											<!-- Table -->
+										<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Area</th>
+													<th>Field</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Rows</td>
+													<td>Subcategory</td>
+												</tr>
+												<tr>
+													<td>Columns</td>
+													<td>Age Group</td>
+												</tr>
+												<tr>
+													<td>Values</td>
+													<td> Count of Orders</td>
+													</tr>
+												
+											</tbody>
+										</table>
+										<p>Insight: Which age group buys each product?</p>
+										</div>
+										<div class="row">
+										<div class="col-5-large col-10-xlarge">
+										<h5>3. Customer Segment Analysis</h5>
+											<!-- Table -->
+									<p>Visualization: Stacked Bar Chart<br>Revenue by Age Group & Gender<br>Pivot Table Fields</p>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Area</th>
+													<th>Field</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Rows</td>
+													<td>Age Group</td>
+												</tr>
+												<tr>
+													<td>Columns</td>
+													<td>Gender</td>
+												</tr>
+												<tr>
+													<td>values</td>
+													<td> Sum of Revenue</td>
+													</tr>
+												</tbody>
+											
+										</table>
+											<p>Which gender-age combination generates the most sales?</p>
+									</div>
+									<h5>4. Sales Seasonality (BP4)</h5>
+											<!-- Table -->
+									<p>Visualization: Line Chart<br>Monthly Revenue Trend<br>Pivot Table Fields</p>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Area</th>
+													<th>Field</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Rows</td>
+													<td>Month</td>
+												</tr>
+												<tr>
+													<td>values</td>
+													<td> Sum of Revenue</td>
+													</tr>
+											</tbody>
+											</table>
+											<p>Sort Months: January → December<br>Insight: Peak sales months</p>
+										</div>
+										<div class="row">
+										<div class="col-5-large col-10-xlarge">
+										<h5>5. Revenue vs Profitability by Products</h5>
+											<!-- Table -->
+									<p>Visualization: Clustered Column<br>Pivot Table Fields</p>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Area</th>
+													<th>Field</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Rows</td>
+													<td>Subcategory</td>
+												</tr>
+												<tr>
+													<td>Values</td>
+													<td>Sum of Revenue</td>
+												</tr>
+												<tr>
+													<td>values</td>
+													<td> Sum of Profit</td>
+													</tr>
+											</tbody>
+											</table>
+											<p>Insight: Which products are:
+												<ol>
+												<li>High Revenue + High Profit </li>
+												<li>High Revenue + Low Profit </li>
+												<li>Low Revenue + High Profit</li>
+											</ol>
+											</p>
+										</div>
+									</div>
+									<hr class="major" />
+									<h4>Reporting & Visualization</h4>
+									<p>The following visualizations were generated with Findings, Key Findings and Insight generated.</p><br>
+								<h5>KPI Dashboard</h5>
+								<div class="image aln-right"><img src="images/BikeGear/insight-01.jpg" alt="" /></div><br>
+								<div class="table-wrapper">
+										<table>
+											<tbody>
+												<tr>
+													<td>Findings</td>
+													<td><p>BikeGear Solutions generated over $95 million in revenue and $42 million in profit, achieving a strong 44% profit margin. The company sold more than 1.35 million units through over 113,000 transactions, with revenue generated from a portfolio of 17 products.</p></td>
+												</tr>
+												<tr>
+													<td>Insights & Explanation</td>
+													<td><p>The company's strong revenue, profitability, and profit margin indicate effective pricing and cost management. Customer purchasing patterns suggest opportunities for cross-selling and upselling, while the concentration of sales within a limited number of products highlights both strengths and potential risks within the product portfolio.</p></td>
+												</tr>
+												<tr>
+													<td>Key Finding</td>
+													<td><p>BikeGear Solutions demonstrates strong overall financial performance, driven by high sales volumes and profitability. However, revenue remains concentrated in a relatively small number of products, creating a dependency that could impact future growth and stability.</p></td>
+												</tr>
+												<tr>
+													<td>Business Impact</td>
+													<td><p>The business is well-positioned for growth due to its strong financial foundation and healthy profit margins. Expanding successful product lines, increasing bundling and cross-selling initiatives, and diversifying the product portfolio can further increase revenue while reducing reliance on a few top-performing products.</p></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								<h5>Revenue Distribution by Region</h5>
+								<div class="image aln-left"><img src="images/BikeGear/insight-1.jpg" alt="" /></div>
+								<div class="table-wrapper">
+										<table>
+											<tbody>
+												<tr>
+													<td>Findings</td>
+													<td><p>The analysis shows that the United States generated the highest revenue, followed by Australia and the United Kingdom, while Canada contributed a moderate share of revenue. Overall, revenue is concentrated in a few key regions, with some markets significantly underperforming.</p></td>
+												</tr>
+												<tr>
+													<td>Insights & Explanation</td>
+													<td><p>The strong performance of the United States, Australia, and the United Kingdom indicates high customer adoption and market demand in these regions. Conversely, weaker-performing regions may require additional marketing support and targeted initiatives, as regional differences appear to influence customer purchasing behavior.</p></td>
+												</tr>
+												<tr>
+													<td>Key Finding</td>
+													<td><p>A small number of regions account for the majority of the company's revenue, highlighting the importance of regional performance and making geographic targeting a critical factor for future growth.</p></td>
+												</tr>
+												<tr>
+													<td>Business Impact</td>
+													<td><p>The company should prioritize its marketing and sales investments in high-revenue regions to maximize returns while also addressing underperforming markets through region-specific strategies. This approach can drive revenue growth, improve market penetration, and reduce dependence on a limited number of key regions.</p></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								<h5>Sales Seasonality</h5>
+								<div class="image aln-left"><img src="images/BikeGear/insight-2.jpg" alt="" /></div>
+								<div class="table-wrapper">
+										<table>
+											<tbody>
+												<tr>
+													<td>Findings</td>
+													<td><p>The sales analysis reveals a clear seasonal pattern, with sales peaking in May and June and experiencing another strong period in December. In contrast, January and February record the lowest sales, demonstrating significant fluctuations in demand throughout the year.</p></td>
+												</tr>
+												<tr>
+													<td>Insights & Explanation</td>
+													<td><p>The increase in sales during spring and summer is driven by higher cycling activity, while strong December performance is likely influenced by holiday shopping and promotional campaigns. These seasonal trends directly affect inventory requirements and operational planning.</p></td>
+												</tr>
+												<tr>
+													<td>Key Finding</td>
+													<td><p>Sales are highly seasonal, with demand concentrated in specific periods of the year. This makes proactive forecasting and inventory planning essential to meeting customer demand and maximizing sales opportunities.</p></td>
+												</tr>
+												<tr>
+													<td>Business Impact</td>
+													<td><p>Understanding seasonal demand patterns enables the company to optimize inventory levels, improve product availability during peak periods, and reduce stock-related issues during slower months. Effective seasonal planning can increase sales, improve customer satisfaction, and enhance overall profitability.</p></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								<h5>Product Popularity </h5>
+								<div class="image aln-left"><img src="images/BikeGear/insight-3.jpg" alt="" /></div>
+								<div class="table-wrapper">
+										<table>
+											<tbody>
+												<tr>
+													<td>Findings</td>
+													<td><p>The analysis shows that Adults generate the highest demand across nearly all product categories, with Young Adults representing the second-largest customer segment. Tires & Tubes, Bottles & Cages, Helmets, and Road Bikes are the most popular products, indicating strong demand for both cycling essentials and performance-related products.</p></td>
+												</tr>
+												<tr>
+													<td>Insights & Explanation</td>
+													<td><p>Adults are the primary market for both bikes and accessories, making them the most valuable customer segment. Young Adults also represent a significant growth opportunity, while essential accessories such as Tires & Tubes, Bottles & Cages, and Helmets demonstrate broad appeal across all age groups, supporting consistent sales performance.</p></td>
+												</tr>
+												<tr>
+													<td>Key Finding</td>
+													<td><p>Adults and Young Adults are the company's primary buyers, accounting for the majority of product demand. Additionally, Tires & Tubes, Bottles & Cages, Helmets, and Road Bikes are the most attractive products across customer segments, making them key drivers of sales and customer engagement.</p></td>
+												</tr>
+												<tr>
+													<td>Business Impact</td>
+													<td><p>Understanding which products appeal most to each age group enables the company to optimize product positioning, marketing campaigns, and promotional offers. By targeting Adults and Young Adults with their preferred products and bundling high-demand accessories with bike purchases, the business can increase sales, improve customer satisfaction, and maximize marketing return on investment.</p></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								<h5>Revenue vs Profitability</h5>
+								<div class="image aln-left"><img src="images/BikeGear/insight-4.jpg" alt="" /></div>
+								<div class="table-wrapper">
+										<table>
+											<tbody>
+												<tr>
+													<td>Findings</td>
+													<td><p>The analysis reveals that revenue and profitability do not always move together, as some high-selling products generate relatively lower profit margins while certain lower-volume products deliver strong profitability. Profitability varies significantly across product categories, highlighting differences in pricing, costs, and margins.</p></td>
+												</tr>
+												<tr>
+													<td>Insights & Explanation</td>
+													<td><p>Focusing solely on revenue can provide an incomplete view of business performance because high sales volumes do not necessarily translate into high profits. A profitability-focused analysis helps identify the products that contribute the most value to the business and supports more informed inventory, pricing, and investment decisions.</p></td>
+												</tr>
+												<tr>
+													<td>Key Finding</td>
+													<td><p>The highest-selling products are not always the most profitable. Products with stronger margins may contribute more to overall business success than products that simply generate high sales volumes.</p></td>
+												</tr>
+												<tr>
+													<td>Business Impact</td>
+													<td><p>Prioritizing high-margin products can improve overall profitability and maximize return on investment. By incorporating profitability metrics into pricing, inventory planning, and product portfolio decisions, the company can allocate resources more effectively and drive sustainable financial growth.</p></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								<h5>Customer Segment Analysis </h5>
+								<div class="image aln-left"><img src="images/BikeGear/insight-5.jpg" alt="" /></div>
+								<div class="table-wrapper">
+										<table>
+											<tbody>
+												<tr>
+													<td>Findings</td>
+													<td><p>The analysis shows that Adults generate the highest revenue, followed by Young Adults, while the Youth segment contributes the least revenue. Revenue is concentrated within a few key age and gender groups, indicating that certain demographic segments have a stronger impact on overall sales than others.</p></td>
+												</tr>
+												<tr>
+													<td>Insights & Explanation</td>
+													<td><p>The results suggest that customer preferences and purchasing behavior vary across age and gender groups. Demographic segmentation helps identify high-value customer segments and reveals opportunities to improve engagement with under-targeted groups through more personalized marketing approaches.</p></td>
+												</tr>
+												<tr>
+													<td>Key Finding</td>
+													<td><p>A small number of age and gender segments, particularly Adults and Young Adults, drive the majority of revenue, demonstrating that targeted age- and gender-based marketing can significantly improve sales performance and conversion rates.</p></td>
+												</tr>
+												<tr>
+													<td>Business Impact</td>
+													<td><p>Leveraging demographic insights to create personalized campaigns and align products with customer preferences can increase customer engagement, acquisition, and revenue growth. Focusing marketing efforts on high-performing segments while developing strategies to grow underperforming groups can further strengthen business performance.</p></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<h4>Final Recommendations</h4>
+										<p><b>Regional Expansion & Product Portfolio Optimization</b><br>Leverage demographic and regional insights to improve market penetration and profitability. Focus marketing investments on high-performing regions such as the United States, Australia, and the United Kingdom, while reviewing underperforming regions and product categories to identify improvement opportunities. Additionally, reassess products with high sales volumes but low profit margins and promote high-margin products through strategic bundling and cross-selling initiatives.<br><b>Expected Outcome:</b>
+										<ol>
+												<li>Higher revenue growth</li>
+												<li>Improved profitability</li>
+												<li>Better allocation of marketing resources</li>
+										</ol>
+										</p>
+											<p><b>Customer Targeting & Personalization</b><br>Implement personalized marketing campaigns based on customer demographics and purchasing behavior. Prioritize Adults (35+) and Young Adults (25–35), as they represent the largest and most valuable customer segments. Develop targeted promotions and engagement strategies, particularly for younger customers, to increase market penetration and customer retention.<br><b>Expected Outcome:</b>
+										<ol>
+												<li>Higher marketing ROI</li>
+												<li>Increased conversion rates</li>
+												<li>Improved customer lifetime value</li>
+										</ol>
+												<p><b>Inventory Optimization</b><br>Align inventory management with product demand patterns by prioritizing high-demand categories. Maintain adequate stock levels for top-performing products such as Road Bikes, Mountain Bikes, Touring Bikes, and popular accessories to reduce stockouts and ensure product availability during peak demand periods.<br><b>Expected Outcome:</b>
+										<ol>
+												<li>Reduced stock shortages</li>
+												<li>Improved operational efficiency</li>
+												<li>Enhanced customer satisfaction</li>
+										</ol>
+													<p><b>Seasonal Planning & Demand Forecasting</b><br>Adopt a proactive approach to seasonal demand management by implementing forecasting models and inventory build-up plans. Increase inventory levels ahead of peak sales periods, particularly during March–April and October–November, and launch promotional campaigns one to two months before the Spring/Summer cycling season and Holiday shopping period.<br><b>Expected Outcome:</b>
+										<ol>
+												<li>Improved demand fulfillment</li>
+												<li>Increased peak-season sales</li>
+												<li>More efficient inventory management</li>
+										</ol>
+									<p><b>Overall Strategic Recommendation</b> <br> BikeGear Solutions should focus on expanding high-performing markets, targeting its most profitable customer segments, optimizing inventory around top-selling products, and strengthening seasonal planning processes. These initiatives will help drive sustainable revenue growth, improve profitability, and enhance overall business performance.</p>
+								</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<ul class="actions special">
+									<li><a href="generic.html" class="button large">Back</a></li>
+								</ul>
+							<!--form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section-->
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
